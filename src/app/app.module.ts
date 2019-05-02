@@ -10,7 +10,26 @@ import { CoursesModule } from './courses/courses.module';
 import { RouterModule } from '@angular/router';
 import { routes } from './shared/config/router.config';
 import { CategoriesModule } from './categories/categories.module';
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuthModule } from "@angular/fire/auth";
 
+import { CoursesEpiComponent } from './courses/courses/courses.component';
+import { RegistreComponent } from './User/registre/registre.component';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
+
+
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDyyT8iluoZ85JaDyz_e1xjv21r8IT8Bd4",
+    authDomain: "myproject-95b97.firebaseapp.com",
+    databaseURL: "https://myproject-95b97.firebaseio.com",
+    projectId: "myproject-95b97",
+    storageBucket: "myproject-95b97.appspot.com",
+    messagingSenderId: "548316117980"
+  };
+ 
 
 
 @NgModule({
@@ -18,6 +37,12 @@ import { CategoriesModule } from './categories/categories.module';
     AppComponent,
     MainHeaderComponent,
     MainFooterComponent,
+   
+  
+    CoursesEpiComponent,
+   
+  
+    RegistreComponent
     
   ],
   imports: [
@@ -25,7 +50,10 @@ import { CategoriesModule } from './categories/categories.module';
     AppRoutingModule,
     RouterModule.forRoot(routes),
     CoursesModule,
-    CategoriesModule
+    CategoriesModule,
+    AngularFireModule.initializeApp(config),
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

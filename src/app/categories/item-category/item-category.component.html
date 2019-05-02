@@ -1,3 +1,8 @@
-<p>
-  item-category works!
-</p>
+<div class="categorie-item">
+  <div class="ci-thumb set-bg" data-setbg="img/categories/6.jpg" [ngStyle]="{'background-image': 'url('+category.image+')'}"></div>
+  <div class="ci-text">
+    <h5>{{category.name}}</h5>
+    <p>{{category.description}}</p>
+    <span>{{category.nbCourses}}</span>
+  </div>
+</div>

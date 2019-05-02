@@ -5,7 +5,7 @@ import { ItemCourseComponent } from './item-course/item-course.component';
 
 
 @NgModule({
-  declarations: [CoursesEpiComponent, ItemCourseComponent],
+  declarations: [],
   imports: [
     CommonModule
   ]

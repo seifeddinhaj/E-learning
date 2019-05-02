@@ -10,12 +10,21 @@
         </div>
       </div>
       <div class="col-lg-9 col-md-9">
-        <a href="" class="site-btn header-btn">Login</a>
+          <div *ngIf ="authService.isLoggedIn" class="nav-item text-white">
+              <a class="site-btn header-btn"  (click)="authService.logout()">Logout</a>
+          
+      </div>
+      <div *ngIf ="!authService.isLoggedIn" class="nav-item text-white">
+          <a class="site-btn header-btn"  routerLink="Registration">Registre now</a>
+      
+  </div>
+     
+
         <nav class="main-menu">
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="courses.html">Courses</a></li>
+            <li><a routerLink="">Home</a></li>
+            <li><a routerLink="Categories">Categories</a></li>
+            <li><a routerLink="courses">Courses</a></li>
             <li><a href="blog.html">News</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>

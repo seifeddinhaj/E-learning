@@ -1,0 +1,25 @@
+<section class="signup-section spad" >
+  <div class="signup-bg set-bg" data-setbg="img/signup-bg.jpg" style="background-image: url('assets/img/signup-bg.jpg');"></div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="signup-warp">
+            <div class="section-title text-white text-left">
+              <h2>Sign up </h2>
+              
+            </div>
+            <!-- signup form -->
+            <div class="signup-form">
+              <input type="text" placeholder="Your Name" #userName>
+              <input type="email" placeholder="Your E-mail" #userEmail>
+              <input type="text" placeholder="Your Phone" #userPhone>
+              <input type="password" placeholder="password" #userPassword>
+              <input type="password" placeholder="confirme password" >
+             
+              <button class="site-btn" (click)="service.SignUp(userEmail.value,userPassword.value,userName.value,userPhone.value)">Registre</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
